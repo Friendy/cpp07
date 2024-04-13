@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mrubina <mrubina@student.42heilbronn.de    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/14 00:08:29 by mrubina           #+#    #+#             */
+/*   Updated: 2024/04/14 00:08:30 by mrubina          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef WHATEVER_HPP
 # define WHATEVER_HPP
 
@@ -11,7 +23,7 @@ void swap(T &x, T &y)
 }
 
 template <typename T>
-T min(T x, T y)
+T const &min(T const &x, T const &y)
 {
 	if (y <= x)
 		return(y);
@@ -20,7 +32,7 @@ T min(T x, T y)
 }
 
 template <typename T>
-T max(T x, T y)
+T const &max(T const &x, T const &y)
 {
 	if (y >= x)
 		return(y);
