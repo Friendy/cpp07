@@ -47,7 +47,7 @@ public:
 	}
 
 	/*FUNCTIONS*/
-	int size() const
+	u_int size() const
 	{
 		return (_size);
 	}
@@ -65,5 +65,18 @@ public:
 			delete [] _a;
 	}
 };
+
+template <typename T>
+void print_arr(Array <T>arr)
+{
+	if (arr.size() != 0)
+	{
+		for (u_int i = 0; i < arr.size() - 1; i++)
+			std::cout << arr[i] << ", ";
+		std::cout << arr[arr.size() - 1] << std::endl;
+	}
+	else
+		std::cout << "empty array" << std::endl;
+}
 
 #endif
